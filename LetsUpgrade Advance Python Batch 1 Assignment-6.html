@@ -4,7 +4,7 @@
 
 <title>LetsUpgrade Advance Python Batch 1 Assignment-6</title>
 
-<script type="text/javascript" src="http://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=Ok2zE3iiZlo_DEYga5Kk-wrD4E83yEztvODxgfnd04k5a4bPcoPr17Fk7loBZLjJ4QjxlvE8tKiZpV8e7axITEppD0eYGOSnRbN0aU5_PEdBWusxgH0gxqvQ8Opa2UcGZSGWV04kCPIju2TVpd4NsLeKsYG6zSG11jW9I7nFvODyvArea-kwZmyxz7ys0hutvcGE8iBm5gZESy4WyCwQY_W_L0v7y5dTSLrc0w0Eaw0" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="http://gc.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cDovL2xvY2FsaG9zdDo4ODg4L25iY29udmVydC9odG1sL0xldHNVcGdyYWRlJTIwQWR2YW5jZSUyMFB5dGhvbiUyMEJhdGNoJTIwMS9MZXRzVXBncmFkZSUyMEFkdmFuY2UlMjBQeXRob24lMjBCYXRjaCUyMDElMjBBc3NpZ25tZW50LTYuaXB5bmI_ZG93bmxvYWQ9dHJ1ZQ"/><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<script type="text/javascript" src="http://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=mos_ph7RzEGR7mTmvscdt7jsPOqhUCfBsHLL-VHDGe4mYE5qSAiAUaMERDgwM16V4hZCM6yxUnsVhRY1O-WTSb3CF7MpH10xYYZ9AjtCJzytxR0vqeRwWuITmET3C1my0pwkuCQtwnw_W4Zm047piss45CZmUQ_Du4M37eB8wJ-1F6OndiZr6e9xDAUtYC4vJMX1S00JDv-3fmc0vLX3TO2Roun3hNKcHYnraF3_kVI" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="http://gc.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cDovL2xvY2FsaG9zdDo4ODg5L25iY29udmVydC9odG1sL0xldHNVcGdyYWRlJTIwQWR2YW5jZSUyMFB5dGhvbiUyMEJhdGNoJTIwMS9MZXRzVXBncmFkZSUyMEFkdmFuY2UlMjBQeXRob24lMjBCYXRjaCUyMDElMjBBc3NpZ25tZW50LTYuaXB5bmI_ZG93bmxvYWQ9dHJ1ZQ"/><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 
@@ -13080,7 +13080,11 @@ div#notebook {
 <h1 id="ASSIGNMENT-6">ASSIGNMENT-6<a class="anchor-link" href="#ASSIGNMENT-6">&#182;</a></h1>
 </div>
 </div>
-</div>Question 1:
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Question 1:
 Remove the hardcoded part from the code with the help of configparser
 Use the file config file exc.ini
 from configparser import ConfigParser
@@ -13091,34 +13095,88 @@ config.read("letus.ini")
 http_ip = config.get("HTTP", "IP")
 http_port = config.getint("HTTP", "port")
 print ("http ip", http_ip)
-print ("http port", http_port, type(http_port))config file:from configparser import ConfigParser
-config = ConfigParser()
-config.read("con1.ini")
+print ("http port", http_port, type(http_port))</p>
 
-http_ip = config.get("HTTP", "IP")
-http_port = config.getint("HTTP", "port")
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="config-file:">config file:<a class="anchor-link" href="#config-file:">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>from configparser import ConfigParser</p>
+<p>config = ConfigParser()</p>
+<p>config.read("con1.ini")</p>
+<p>http_ip = config.get("HTTP", "IP")</p>
+<p>http_port = config.getint("HTTP", "port")</p>
+<p>print ("http ip", http_ip)</p>
+<p>print ("http port", http_port)</p>
 
-print ("http ip", http_ip)
-print ("http port", http_port)ini file:[HTTP]
-ip = 192.168.10.6
-port = 8080Question 2:
-The question has been asked in an interview
-Please write the code in such a way so that it could give all path of a #file (same name ) which is present
-in multiple locations.
-import os
-resp =os.walk("G:\\letsupgrade\\test")
-d1= {}
-for r,d,f in resp:
-for file in f:
-d1[file]= r
-#print (d1)
-file_name = input("Enter the file name ")
-for k,v in d1.items():
-if file_name.lower() in k.lower() :
-print (k,":", v)
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="ini-file:">ini file:<a class="anchor-link" href="#ini-file:">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>[HTTP]</p>
+<p>ip = 192.168.10.6</p>
+<p>port = 8080</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Question-2:">Question 2:<a class="anchor-link" href="#Question-2:">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The question has been asked in an interview</p>
+<p>Please write the code in such a way so that it could give all path of a #file (same name ) which is present
+in multiple locations.</p>
+<p>import os</p>
+<p>resp =os.walk("G:\letsupgrade\test")</p>
+<p>d1= {}</p>
+<p>for r,d,f in resp:</p>
+
+<pre><code>for file in f:
+
+    d1[file]= r
+
+        #print (d1)
+
+</code></pre>
+<p>file_name = input("Enter the file name ")</p>
+
+<pre><code>for k,v in d1.items():
+
+    if file_name.lower() in k.lower() :
+
+        print (k,":", v)</code></pre>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
